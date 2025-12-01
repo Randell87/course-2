@@ -20,7 +20,7 @@ public class Question {
     }
 
     @Override
-    public boolean equals(Object o ) {
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Question q)) return false;
         return Objects.equals(question, q.question) && Objects.equals(answer, q.answer);
