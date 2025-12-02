@@ -1,6 +1,7 @@
 package org.skypro.course2.service;
 
 import org.skypro.course2.domain.Question;
+import org.skypro.course2.exception.QuestionNotFoundException;
 
 import java.util.*;
 
@@ -18,10 +19,11 @@ public class JavaQuestionService implements QuestionService {
     @Override
     public Question remove(String question, String answer) {
         Question toRemove = new Question(question, answer);
-        if (questions.remove(toRemove)) {
-            return toRemove;
+        if (!questions.contains(toRemove)) {
+            throw new QuestionNotFoundException("Вопрос не найден: \"" + question + "\"");
         }
-        return null;
+        questions.remove(toRemove);
+        return toRemove;
     }
 
     @Override
