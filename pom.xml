@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>org.skypro</groupId>
 	<artifactId>course2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT </version>
 	<name>course2</name>
 	<description>Курсовая2</description>
 	<url/>
